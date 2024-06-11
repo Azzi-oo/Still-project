@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>{% block title %} {% endblock %}</title>
+  <!--[if IE]>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style>
+   article, aside, details, figcaption, figure, footer,header,
+   hgroup, menu, nav, section { display: block; }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'mainer/css/mainer.css' %}">
+ </head>
+ <body>
+    <aside>
+        <span class="logo">itProger</span>
+        <h3>Navigation</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li>MainTance</li><i class="fas fa-home"></i> Main</li></a>
+            <a href="{% url 'about' %}"><li>About us</li><i class="fas fa-address-card"></i> Aboutness</li></a>
+            <a href="{% url 'news_home' %}"><li>News</li><i class="fas fa-newspaper"></i> Nows</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i></a>
+        </ul>
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+ </body>
+</html>

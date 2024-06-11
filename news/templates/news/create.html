@@ -1,0 +1,16 @@
+{% extends "mainer/layout.html" %}
+
+{% block title %}Forms added{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Forms added</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Name staties" class="form-control"><br>
+            <input type="text" placeholder="Anons staties" class="form-control"><br>
+            <textarea class="form-control" placeholder="Text staties"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="text" class="form-control"><br>
+        <button class="btn btn-success" type="submit">Add staties</button>
+{% endblock %}

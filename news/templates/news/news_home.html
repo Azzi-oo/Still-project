@@ -1,0 +1,13 @@
+{% extends "mainer/layout.html" %}
+
+{% block title %}News on site{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>News</h1>
+        <p>На нащем сайте представлена информация, что может помочь в решении проблемы</p>
+        <button class="btn-warning">Click</button>
+
+        {{ news }}
+    </div>
+{% endblock %}
